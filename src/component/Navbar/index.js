@@ -54,6 +54,7 @@ function Navbar() {
         sx={{
           width: "88%",
           mx: "auto",
+          pr:0,pl:0,
           maxWidth: { md: "1300px" },
         }}
       >
@@ -69,9 +70,9 @@ function Navbar() {
           <Box sx={{ display: "flex", alignItems: "center" }}>
             {/* Dynamic Logo */}
             {isScrolled ? (
-              <LogoDark fill="#000" width={100} />
+              <LogoDark fill="#000" width={'121px'} />
             ) : (
-              <LogoLight fill="#fff" width={100} />
+              <LogoLight fill="#fff" width={'121px'} />
             )}
 
             {/* Desktop Navigation Links */}
