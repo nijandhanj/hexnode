@@ -1,5 +1,5 @@
 import { Box, Grid, Typography, Divider } from "@mui/material";
-import newsSectionStyles from "../../styles/newsSectionStyles"; // Import styles
+import newsSectionStyles from "../CoverSection/Styles/NewsSection.styles" ;
 
 const accolades = [
   {

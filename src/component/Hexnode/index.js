@@ -253,7 +253,7 @@ const data = [
 export default function HexNode() {
   return (
     <Box
-    id="whyhexnode" 
+      id="whyhexnode"
       sx={{
         flexGrow: 1,
         background: "#f7f7f7",
@@ -279,10 +279,20 @@ export default function HexNode() {
           height={105}
           sx={{}}
         />
-      <AnimatedComponent top={"85%"} left={"75%"}/>
-      <AnimatedComponent direction="left" top={"85%"} right= {"75%"}/>  
-      <AnimatedComponent direction="right" reverse left={"75%"} bottom={"85%"}/>
-      <AnimatedComponent direction="left" reverse right={"75%"} bottom={"85%"} /> 
+        <AnimatedComponent top={"85%"} left={"75%"} />
+        <AnimatedComponent direction="left" top={"85%"} right={"75%"} />
+        <AnimatedComponent
+          direction="right"
+          reverse
+          left={"75%"}
+          bottom={"85%"}
+        />
+        <AnimatedComponent
+          direction="left"
+          reverse
+          right={"75%"}
+          bottom={"85%"}
+        />
       </Box>
       <Grid
         container
@@ -291,7 +301,11 @@ export default function HexNode() {
       >
         <Grid item xs={12} sx={{ pb: 4 }}>
           <Typography
-            sx={{  fontSize: { xs: "32px", md: "40px" }, fontWeight: "700", textAlign: "center" }}
+            sx={{
+              fontSize: { xs: "32px", md: "40px" },
+              fontWeight: "700",
+              textAlign: "center",
+            }}
             variant="h2"
           >
             Why Hexnode?
@@ -315,7 +329,7 @@ export default function HexNode() {
             <Card
               sx={{
                 transition: "all 0.3s ease-in-out",
-                zIndex:1,
+                zIndex: 1,
                 height: "fit-content",
                 "&:hover": {
                   transform: "translateY(-5px)",
@@ -332,9 +346,10 @@ export default function HexNode() {
                 <Typography
                   variant="h4"
                   sx={{
-                    
                     fontSize: { xs: "20px", md: "24px" },
-                     fontWeight: "700", color: "#000" }}
+                    fontWeight: "700",
+                    color: "#000",
+                  }}
                 >
                   {item.title}
                 </Typography>

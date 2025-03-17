@@ -3,18 +3,16 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Box } from "@mui/material";
+import Gorillas from "../../assets/customer-logos/gorillas.svg";
+import Saic from "../../assets/customer-logos/saic.svg";
+import Hilton from "../../assets/customer-logos/hilton.svg";
+import Merck from "../../assets/customer-logos/merck.svg";
+import Lowes from "../../assets/customer-logos/lowes.svg";
+import Polaris from "../../assets/customer-logos/polaris.svg";
+
 
 const logos = [
-  "https://static.hexnode.com/v2/assets/img/logos/dark-logo/costco.svg",
-  "https://static.hexnode.com/v2/assets/img/logos/dark-logo/saic.svg",
-  "https://static.hexnode.com/v2/assets/img/logos/dark-logo/hilton.svg",
-  "https://static.hexnode.com/v2/assets/img/logos/dark-logo/group1-automotive.png",
-  "https://static.hexnode.com/v2/assets/img/logos/dark-logo/lowes.svg",
-  "https://static.hexnode.com/v2/assets/img/logos/dark-logo/polaris.svg",
-  "https://static.hexnode.com/v2/assets/img/logos/dark-logo/gorillas.svg",
-  "https://static.hexnode.com/v2/assets/img/logos/dark-logo/wolt.svg",
-  "https://static.hexnode.com/v2/assets/img/logos/dark-logo/marriott-intl.svg",
-  "https://static.hexnode.com/v2/assets/img/logos/dark-logo/merck.svg",
+  Gorillas,Saic,Hilton,Merck,Lowes,Polaris
 ];
 
 const settings = {

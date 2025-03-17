@@ -40,7 +40,7 @@ function Navbar() {
     const section = document.getElementById(id);
     if (section) {
       window.scrollTo({
-        top: section.offsetTop - 80, 
+        top: section.offsetTop - 80,
         behavior: "smooth",
       });
       handleCloseNavMenu();
@@ -57,16 +57,44 @@ function Navbar() {
         p: "8px",
       }}
     >
-      <Container maxWidth={false} sx={{ width: "88%", mx: "auto", pr: 0, pl: 0, maxWidth: { md: "1300px" } }}>
-        <Toolbar disableGutters sx={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+      <Container
+        maxWidth={false}
+        sx={{
+          width: "88%",
+          mx: "auto",
+          pr: 0,
+          pl: 0,
+          maxWidth: { md: "1300px" },
+        }}
+      >
+        <Toolbar
+          disableGutters
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+          }}
+        >
           <Box sx={{ display: "flex", alignItems: "center" }}>
-            {isScrolled ? <LogoDark fill="#000" width={'121px'} /> : <LogoLight fill="#fff" width={'121px'} />}
+            {isScrolled ? (
+              <LogoDark fill="#000" width={"121px"} />
+            ) : (
+              <LogoLight fill="#fff" width={"121px"} />
+            )}
             <Box sx={{ display: { xs: "none", md: "flex" }, ml: 3 }}>
               {pages.map((page) => (
                 <Typography
                   key={page}
-                  sx={{ mx: 2, color: isScrolled ? "#000" : "white", cursor: "pointer", transition: "color 0.3s ease-in-out", fontSize: 15 }}
-                  onClick={() => handleScroll(page.toLowerCase().replace(/\s+/g, ""))}
+                  sx={{
+                    mx: 2,
+                    color: isScrolled ? "#000" : "white",
+                    cursor: "pointer",
+                    transition: "color 0.3s ease-in-out",
+                    fontSize: 15,
+                  }}
+                  onClick={() =>
+                    handleScroll(page.toLowerCase().replace(/\s+/g, ""))
+                  }
                 >
                   {page}
                 </Typography>
@@ -74,17 +102,45 @@ function Navbar() {
             </Box>
           </Box>
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
-            <Button variant="contained" size="large" sx={{ backgroundColor: "#dd0735", color: "white", "&:hover": { backgroundColor: "#b30000" } }}>
+            <Button
+              variant="contained"
+              size="large"
+              sx={{
+                backgroundColor: "#dd0735",
+                color: "white",
+                "&:hover": { backgroundColor: "#b30000" },
+              }}
+            >
               14 DAY FREE TRIAL
             </Button>
           </Box>
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" }, justifyContent: "flex-end" }}>
-            <IconButton size="large" onClick={handleOpenNavMenu} color="inherit">
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "flex", md: "none" },
+              justifyContent: "flex-end",
+            }}
+          >
+            <IconButton
+              size="large"
+              onClick={handleOpenNavMenu}
+              color="inherit"
+            >
               <MenuIcon sx={{ color: isScrolled ? "#000" : "#fff" }} />
             </IconButton>
-            <Menu anchorEl={anchorElNav} open={Boolean(anchorElNav)} onClose={handleCloseNavMenu} sx={{ display: { xs: "block", md: "none" } }}>
+            <Menu
+              anchorEl={anchorElNav}
+              open={Boolean(anchorElNav)}
+              onClose={handleCloseNavMenu}
+              sx={{ display: { xs: "block", md: "none" } }}
+            >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={() => handleScroll(page.toLowerCase().replace(/\s+/g, ""))}>
+                <MenuItem
+                  key={page}
+                  onClick={() =>
+                    handleScroll(page.toLowerCase().replace(/\s+/g, ""))
+                  }
+                >
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}

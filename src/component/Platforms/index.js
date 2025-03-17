@@ -33,8 +33,7 @@ export default function Platforms() {
 
   return (
     <Box
-    id="platforms" 
-
+      id="platforms"
       sx={{
         flexGrow: 1,
         background: "#f7f7f7",
@@ -43,7 +42,11 @@ export default function Platforms() {
         position: "relative",
       }}
     >
-      <Grid container spacing={2} sx={{ width: "88%", margin: "auto", display: "flex" }}>
+      <Grid
+        container
+        spacing={2}
+        sx={{ width: "88%", margin: "auto", display: "flex" }}
+      >
         <Grid item xs={12} sx={{ pb: 4 }}>
           <Typography
             sx={{
@@ -67,7 +70,8 @@ export default function Platforms() {
               color: "rgb(51 51 51)",
             }}
           >
-            Devices of varying platforms? Hexnode thrives in a diverse environment.
+            Devices of varying platforms? Hexnode thrives in a diverse
+            environment.
           </Typography>
         </Grid>
 

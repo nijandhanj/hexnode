@@ -3,14 +3,14 @@ import { createTheme } from "@mui/material/styles";
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#1976d2", // Custom primary color
+      main: "#1976d2", 
     },
     secondary: {
-      main: "#dc004e", // Custom secondary color
+      main: "#dc004e", 
     },
   },
   typography: {
-    fontFamily: '"Mulish", sans-serif', // Corrected quotes
+    fontFamily: '"Mulish", sans-serif', 
   },
 });
 

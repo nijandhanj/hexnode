@@ -1,9 +1,7 @@
 import * as React from "react";
 import { styled } from "@mui/material/styles";
 import MuiAccordion from "@mui/material/Accordion";
-import MuiAccordionSummary, {
-  accordionSummaryClasses,
-} from "@mui/material/AccordionSummary";
+import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 
@@ -11,10 +9,10 @@ const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
 ))(({ expanded }) => ({
   borderBottom: "1px solid rgba(0, 0, 0, 0.2)",
-  borderRadius: expanded ? "15px" : "0", // Apply border-radius when expanded
-  backgroundColor: expanded ? "#fff" : "transparent", // Background color change
+  borderRadius: expanded ? "15px" : "0", 
+  backgroundColor: expanded ? "#fff" : "transparent", 
   transition:
-    "background-color 0.3s ease-in-out, border-radius 0.3s ease-in-out", // Smooth effect
+    "background-color 0.3s ease-in-out, border-radius 0.3s ease-in-out", 
   "&::before": {
     display: "none",
   },
@@ -23,17 +21,17 @@ const Accordion = styled((props) => (
 const AccordionSummary = styled((props) => (
   <MuiAccordionSummary expandIcon={null} {...props} />
 ))(({ expanded }) => ({
-  backgroundColor: expanded ? "#fff!important" : "#f7f7f7", // Background color when expanded
+  backgroundColor: expanded ? "#fff!important" : "#f7f7f7", 
   flexDirection: "row-reverse",
-  borderRadius: expanded ? "15px" : "0", // Rounded corners when expanded
+  borderRadius: expanded ? "15px" : "0",
   transition:
     "background-color 0.3s ease-in-out, border-radius 0.3s ease-in-out",
 }));
 
 const AccordionDetails = styled(MuiAccordionDetails)(() => ({
   padding: "16px",
-  backgroundColor: "#fff!important", // Background color for expanded content
-  borderBottomLeftRadius: "15px", // Ensures rounded bottom when expanded
+  backgroundColor: "#fff!important", 
+  borderBottomLeftRadius: "15px", 
   borderBottomRightRadius: "15px",
 }));
 
@@ -70,7 +68,7 @@ const accordionData = [
   },
 ];
 
-export default function CustomizedAccordions({setAccordion}) {
+export default function CustomizedAccordions({ setAccordion }) {
   const [expanded, setExpanded] = React.useState(null);
 
   const handleChange = (panel) => (event, newExpanded) => {
@@ -90,13 +88,23 @@ export default function CustomizedAccordions({setAccordion}) {
             aria-controls={`panel${index}-content`}
             id={`panel${index}-header`}
             sx={{
-                borderTop:expanded === `panel${index}` ? "1px solid #d7d7d7" : "transparent", 
-                borderRight:expanded === `panel${index}` ? "1px solid #d7d7d7" : "transparent", 
-                borderLeft:expanded === `panel${index}` ? "1px solid #d7d7d7" : "transparent", 
-                backgroundColor: expanded === `panel${index}` ? "#fff" : "transparent",
-                borderTopRightRadius: expanded === `panel${index}` ? "15px" : "0", // Apply border radius when expanded
-                borderTopLeftRadius: expanded === `panel${index}` ? "15px" : "0", // Apply border radius when expanded
-              }}
+              borderTop:
+                expanded === `panel${index}`
+                  ? "1px solid #d7d7d7"
+                  : "transparent",
+              borderRight:
+                expanded === `panel${index}`
+                  ? "1px solid #d7d7d7"
+                  : "transparent",
+              borderLeft:
+                expanded === `panel${index}`
+                  ? "1px solid #d7d7d7"
+                  : "transparent",
+              backgroundColor:
+                expanded === `panel${index}` ? "#fff" : "transparent",
+              borderTopRightRadius: expanded === `panel${index}` ? "15px" : "0", // Apply border radius when expanded
+              borderTopLeftRadius: expanded === `panel${index}` ? "15px" : "0", // Apply border radius when expanded
+            }}
           >
             <Typography
               variant="h6"
@@ -112,19 +120,24 @@ export default function CustomizedAccordions({setAccordion}) {
             </Typography>
           </AccordionSummary>
           <AccordionDetails
-          sx={{
-            borderRight:expanded === `panel${index}` ? "1px solid #d7d7d7" : "transparent", 
-            borderLeft:expanded === `panel${index}` ? "1px solid #d7d7d7" : "transparent",
-
-          }}
+            sx={{
+              borderRight:
+                expanded === `panel${index}`
+                  ? "1px solid #d7d7d7"
+                  : "transparent",
+              borderLeft:
+                expanded === `panel${index}`
+                  ? "1px solid #d7d7d7"
+                  : "transparent",
+            }}
           >
             <Typography
               sx={{
                 fontSize: "18px",
-                
+
                 mb: "20px",
                 color: "rgb(51 51 51)",
-                pl:"30px"
+                pl: "30px",
               }}
             >
               {item.description}
@@ -135,9 +148,9 @@ export default function CustomizedAccordions({setAccordion}) {
                 fontWeight: 600,
                 color: "#dd0735",
                 cursor: "pointer",
-                pl:"30px",
-                pb:1,
-                pt:0,
+                pl: "30px",
+                pb: 1,
+                pt: 0,
               }}
             >
               Try Hexnode on your endpoints

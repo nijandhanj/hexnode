@@ -9,7 +9,10 @@ export default function Footer() {
         py: { xs: "20px", sm: "30px" },
       }}
     >
-      <Container maxWidth="lg" sx={{ width: "88%", maxWidth: "1300px", mx: "auto" }}>
+      <Container
+        maxWidth="lg"
+        sx={{ width: "88%", maxWidth: "1300px", mx: "auto" }}
+      >
         <Stack
           direction={{ xs: "column", sm: "row" }}
           justifyContent="space-between"
@@ -21,14 +24,30 @@ export default function Footer() {
           <Stack
             direction="row"
             spacing={1.5}
-            sx={{ order: { xs: 2, sm: 1 }, flexWrap: "wrap", justifyContent: "center" }}
+            sx={{
+              order: { xs: 2, sm: 1 },
+              flexWrap: "wrap",
+              justifyContent: "center",
+            }}
           >
             {[
-              { text: "Terms of Use", href: "https://www.hexnode.com/legal/terms-of-use/" },
-              { text: "Privacy", href: "https://www.hexnode.com/legal/privacy-policy/" },
-              { text: "Cookies", href: "https://www.hexnode.com/legal/cookies-policy/" },
+              {
+                text: "Terms of Use",
+                href: "https://www.hexnode.com/legal/terms-of-use/",
+              },
+              {
+                text: "Privacy",
+                href: "https://www.hexnode.com/legal/privacy-policy/",
+              },
+              {
+                text: "Cookies",
+                href: "https://www.hexnode.com/legal/cookies-policy/",
+              },
             ].map((item, index, arr) => (
-              <Box key={item.text} sx={{ display: "flex", alignItems: "center" }}>
+              <Box
+                key={item.text}
+                sx={{ display: "flex", alignItems: "center" }}
+              >
                 <Link
                   href={item.href}
                   underline="none"
@@ -44,7 +63,9 @@ export default function Footer() {
                   {item.text}
                 </Link>
                 {index < arr.length - 1 && (
-                  <Typography sx={{ mx: 1, fontSize: "14px", opacity: 0.8 }}>-</Typography>
+                  <Typography sx={{ mx: 1, fontSize: "14px", opacity: 0.8 }}>
+                    -
+                  </Typography>
                 )}
               </Box>
             ))}

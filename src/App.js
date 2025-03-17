@@ -12,7 +12,6 @@ import Footer from "./component/Footer";
 import Platforms from "./component/Platforms";
 import NewsSection from "./component/CoverSection/NewsSection";
 
-
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
@@ -20,22 +19,18 @@ const App = () => {
 
       <CoverSection />
       <NewsSection />
-      {/* hexnode */}
       <HexNode />
-    {/* id="features"  */}
-      
-      <Features />
-    {/* id="platforms"  */}
 
-      <Platforms/>
-    {/* id="customers"  */}
+      <Features />
+
+      <Platforms />
 
       <Customers />
-      
-      <LogoCarousel/>
+
+      <LogoCarousel />
       <TryHexNode />
-      
-      <Footer/>
+
+      <Footer />
     </ThemeProvider>
   );
 };

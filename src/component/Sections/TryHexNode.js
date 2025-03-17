@@ -26,7 +26,10 @@ export default function HexnodeSection() {
       />
 
       {/* Content container */}
-      <Container maxWidth="lg" sx={{ width: "88%", maxWidth: "1300px", mx: "auto" }}>
+      <Container
+        maxWidth="lg"
+        sx={{ width: "88%", maxWidth: "1300px", mx: "auto" }}
+      >
         <Box sx={{ textAlign: "center", maxWidth: "1000px", mx: "auto" }}>
           <Typography
             variant="h3"

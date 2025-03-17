@@ -49,14 +49,33 @@ const TestimonialCarousel = () => {
   };
 
   return (
-    <Box 
-    id="customers" 
-
-     sx={{ position: "relative", width: "100%", maxWidth: 960, mx: "auto", overflow: "hidden" }}>
-      <Typography sx={{ pb: 5, fontSize: { xs: "32px", md: "40px" }, fontWeight: "700", textAlign: "center" }}>
+    <Box
+      id="customers"
+      sx={{
+        position: "relative",
+        width: "100%",
+        maxWidth: 960,
+        mx: "auto",
+        overflow: "hidden",
+      }}
+    >
+      <Typography
+        sx={{
+          pb: 5,
+          fontSize: { xs: "32px", md: "40px" },
+          fontWeight: "700",
+          textAlign: "center",
+        }}
+      >
         What our customers say
       </Typography>
-      <Box sx={{ display: "flex", transition: "transform 0.5s ease-in-out", transform: `translateX(-${currentIndex * 100}%)` }}>
+      <Box
+        sx={{
+          display: "flex",
+          transition: "transform 0.5s ease-in-out",
+          transform: `translateX(-${currentIndex * 100}%)`,
+        }}
+      >
         {testimonials.map((testimonial, index) => (
           <Card
             key={index}
@@ -116,7 +135,13 @@ const TestimonialCarousel = () => {
                 "{testimonial.quote}"
               </Typography>
               <Box sx={{ py: 3, background: "#eaebeb" }}>
-                <Typography sx={{ fontSize: { xs: "16px", md: "20px" }, fontWeight: "700", px: { xs: 2, md: 4 } }}>
+                <Typography
+                  sx={{
+                    fontSize: { xs: "16px", md: "20px" },
+                    fontWeight: "700",
+                    px: { xs: 2, md: 4 },
+                  }}
+                >
                   {testimonial.name}
                 </Typography>
                 <Typography
