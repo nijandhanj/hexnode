@@ -6,6 +6,7 @@ import Features from "./component/Features";
 import { ThemeProvider } from "@mui/material";
 import theme from "./helpers/ThemeConfig";
 import HexNode from "./component/Hexnode";
+import LogoCarousel from "./component/Customers/Company";
 
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
       <Features />
 
       <Customers />
+      <LogoCarousel/>
     </ThemeProvider>
   );
 };
