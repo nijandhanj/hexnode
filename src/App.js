@@ -7,6 +7,9 @@ import { ThemeProvider } from "@mui/material";
 import theme from "./helpers/ThemeConfig";
 import HexNode from "./component/Hexnode";
 import LogoCarousel from "./component/Customers/Company";
+import TryHexNode from "./component/Sections/TryHexNode";
+import Footer from "./component/Footer";
+import Platforms from "./component/Platforms";
 
 
 const App = () => {
@@ -16,9 +19,12 @@ const App = () => {
       <CoverSection />
       <HexNode />
       <Features />
-
+      <Platforms/>
       <Customers />
       <LogoCarousel/>
+      <TryHexNode />
+      
+      <Footer/>
     </ThemeProvider>
   );
 };
