@@ -46,6 +46,8 @@ const featuresData = [
 export default function Features() {
   return (
     <Box
+    id="features" 
+
       sx={{
         flexGrow: 1,
         background: "#fff",
@@ -61,7 +63,7 @@ export default function Features() {
       >
         <Grid item xs={12} sx={{ pb: 4 }}>
           <Typography
-            sx={{ fontSize: "40px",pb:"20px", fontWeight: "700", textAlign: "center", maxWidth: "800px", margin: "auto" }}
+            sx={{  fontSize: { xs: "32px", md: "40px" },pb:"20px", fontWeight: "700", textAlign: "center", maxWidth: "800px", margin: "auto" }}
             variant="h2"
           >
             Powerful endpoint management, built for the devices you choose
@@ -79,7 +81,7 @@ export default function Features() {
                 />
                 <CardContent>
                   <Typography
-                    sx={{ fontSize: "32px", pt: 4, pb: 2, fontWeight: "700", textAlign: "left", maxWidth: "800px", margin: "auto" }}
+                    sx={{ fontSize:  { xs: "24px", md: "32px" }, pt: 4, pb: 2, fontWeight: "700", textAlign: "left", maxWidth: "800px", margin: "auto" }}
                     gutterBottom
                     variant="h5"
                     component="div"
@@ -87,7 +89,7 @@ export default function Features() {
                     {feature.title}
                   </Typography>
                   <Typography
-                    sx={{ fontSize: "18px", mt: "15px", mb: "20px", color: "rgb(51 51 51)" }}
+                    sx={{ fontSize: { xs: "16px", md: "18px" }, mt: "15px", mb: "20px", color: "rgb(51 51 51)" }}
                   >
                     {feature.description}
                   </Typography>

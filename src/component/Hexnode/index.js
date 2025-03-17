@@ -253,6 +253,7 @@ const data = [
 export default function HexNode() {
   return (
     <Box
+    id="whyhexnode" 
       sx={{
         flexGrow: 1,
         background: "#f7f7f7",
@@ -290,7 +291,7 @@ export default function HexNode() {
       >
         <Grid item xs={12} sx={{ pb: 4 }}>
           <Typography
-            sx={{ fontSize: "40px", fontWeight: "700", textAlign: "center" }}
+            sx={{  fontSize: { xs: "32px", md: "40px" }, fontWeight: "700", textAlign: "center" }}
             variant="h2"
           >
             Why Hexnode?
@@ -330,14 +331,17 @@ export default function HexNode() {
                 {item.icon}
                 <Typography
                   variant="h4"
-                  sx={{ fontSize: "24px", fontWeight: "700", color: "#000" }}
+                  sx={{
+                    
+                    fontSize: { xs: "20px", md: "24px" },
+                     fontWeight: "700", color: "#000" }}
                 >
                   {item.title}
                 </Typography>
               </Box>
               <Typography
                 sx={{
-                  fontSize: "18px",
+                  fontSize: { xs: "16px", md: "18px" },
                   mt: "15px",
                   mb: "20px",
                   color: "rgb(51 51 51)",

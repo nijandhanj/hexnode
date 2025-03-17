@@ -33,6 +33,8 @@ export default function Platforms() {
 
   return (
     <Box
+    id="platforms" 
+
       sx={{
         flexGrow: 1,
         background: "#f7f7f7",
@@ -45,7 +47,7 @@ export default function Platforms() {
         <Grid item xs={12} sx={{ pb: 4 }}>
           <Typography
             sx={{
-              fontSize: "40px",
+              fontSize: { xs: "32px", md: "40px" },
               pb: "20px",
               fontWeight: "700",
               textAlign: "center",
